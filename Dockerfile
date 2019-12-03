@@ -29,6 +29,9 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsof
         && apt-get update \
         && apt-get install -y powershell
 
+# Install unzip
+RUN apt-get --assume-yes install unzip
+
 # Install Terraform
 ARG TERRAFORM_URL="https://releases.hashicorp.com/terraform/0.12.17/terraform_0.12.17_linux_amd64.zip"
 RUN echo "Installing Terraform..."
